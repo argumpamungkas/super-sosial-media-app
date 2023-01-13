@@ -1,9 +1,12 @@
 package com.argumelar.supermediaapp.ui.signup
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.argumelar.supermediaapp.Constant
+import com.argumelar.supermediaapp.R
 import com.argumelar.supermediaapp.databinding.ActivitySignUpBinding
 import com.argumelar.supermediaapp.ui.home.MainActivity
 import com.argumelar.supermediaapp.ui.login.LoginActivity
@@ -31,12 +34,12 @@ class SignUpActivity : AppCompatActivity() {
         binding.btnSignUp.setOnClickListener {
 
             val name = binding.etFullName.text.toString().trim()
+            val image = Uri.parse(Constant.IMAGE_DEFAULT)
 
             if (name.isEmpty()){
                 binding.etFullName.error = "Field kosong, Harap isi"
             } else {
-                viewModel.userUpdateProfile(name)
-                Log.i("this", name.toString())
+                viewModel.userUpdateProfile(name, image)
             }
         }
 

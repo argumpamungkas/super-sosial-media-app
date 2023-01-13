@@ -2,6 +2,7 @@ package com.argumelar.supermediaapp
 
 import android.app.Application
 import android.util.Log
+import com.argumelar.supermediaapp.ui.editprofile.moduleEditProfileActivity
 import com.argumelar.supermediaapp.ui.home.moduleMainActivity
 import com.argumelar.supermediaapp.ui.home.moduleMainViewModel
 import com.argumelar.supermediaapp.ui.login.moduleLoginActivity
@@ -35,7 +36,8 @@ open class SuperMediaApplication: Application() {
                 moduleLoginActivity,
                 moduleLoginViewModel,
                 moduleSignUpActivity,
-                moduleSignUpViewModel
+                moduleSignUpViewModel,
+                moduleEditProfileActivity
             )
         }
     }

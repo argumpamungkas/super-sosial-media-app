@@ -14,4 +14,9 @@
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="display_name">Display Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="dari_galeri">Galeri</string>
+    <string name="dari_kamera">Kamera</string>
+    <string name="batal">Batal</string>
 </resources>

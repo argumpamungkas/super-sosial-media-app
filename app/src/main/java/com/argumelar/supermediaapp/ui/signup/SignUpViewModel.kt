@@ -1,5 +1,6 @@
 package com.argumelar.supermediaapp.ui.signup
 
+import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -44,10 +45,11 @@ class SignUpViewModel : ViewModel() {
         }
     }
 
-    fun userUpdateProfile(name: String) {
+    fun userUpdateProfile(name: String, image: Uri) {
         viewModelScope.launch {
             _currentUser?.updateProfile(userProfileChangeRequest {
                 displayName = name
+                photoUri = image
             })?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     _updateProfile.value = true

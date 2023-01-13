@@ -18,7 +18,7 @@ val moduleMainViewModel = module {
 class MainViewModel: ViewModel() {
 
     private val auth = Firebase.auth
-    val _currentUser = auth.currentUser
+    private val _currentUser = auth.currentUser
 
     private val _user = MutableLiveData<Boolean>()
     val user : LiveData<Boolean> = _user
@@ -31,11 +31,6 @@ class MainViewModel: ViewModel() {
         if (_currentUser == null){
             _user.value = true
         }
-//        val nama = _currentUser
-//        nama.let {
-//            Log.i("email", nama?.email.toString())
-//            Log.i("email", nama?.displayName.toString())
-//        }
     }
 
     fun logout(){
